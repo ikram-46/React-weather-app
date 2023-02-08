@@ -1,0 +1,80 @@
+.CardSlider {
+    position: relative;
+  
+    &.__dark {
+      .CardSlider__buttons {
+        & > div {
+          svg {
+            fill: #000;
+          }
+        }
+      }
+    }
+  
+    &.__home {
+      .CardSlider__buttons {
+        top: -60px;
+        right: 4%;
+      }
+    }
+  
+    &__buttons {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: -40px;
+      right: 2%;
+      z-index: 999;
+  
+      & > div {
+        width: 32px;
+        height: 32px;
+        margin: 0 10px;
+        cursor: pointer;
+  
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  
+    &__empty {
+      display: flex;
+      flex-wrap: wrap;
+  
+      .CardBase {
+        margin: 0 60px 0 0;
+  
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  
+    .slick-track {
+      margin: 0 !important;
+    }
+    .slick-slide {
+      //width: auto !important;
+    }
+  
+    .slick-arrow {
+      display: none !important;
+    }
+  
+    @media (max-width: 600px) {
+      &__buttons {
+        right: 0;
+  
+        & > div {
+          width: 30px;
+          height: 30px;
+          margin: 0 7px;
+  
+          svg {
+            transform: scale(0.8);
+          }
+        }
+      }
+    }
+  }
